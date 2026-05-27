@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siatkówka - Sports News</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #data {
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 5px;
+            opacity: 0.85;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>SPORTS <span>NEWS</span></h1>
+        </div>
+
+        <div id="data"></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="pilka-nozna.html">Piłka nożna</a></li>
+                <li><a href="koszykowka.html">Koszykówka</a></li>
+                <li><a href="tenis.html">Tenis</a></li>
+                <li><a href="formula1.html">Formuła 1</a></li>
+                <li><a href="siatkowka.html">Siatkówka</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="title-section">
+            <h2>Wiadomości: Siatkówka</h2>
+        </section>
+
+        <section class="news-container">
+            <!-- Pierwsza karta - News o reprezentacji -->
+            <div class="card">
+                <img src="https://ipla.pluscdn.pl/dituel/cp/44/448x4nqpqkmyrqd96u4rqc52mq3ef31c.JPG" alt="Mecz siatkówki">
+                 <div class="card-content">
+        <h3><a href="artykul-liga-narodow.html">Polacy dominują w Lidze Narodów!</a></h3>
+        <p>Nasza reprezentacja odniosła kolejne pewne zwycięstwo, pokonując rywali bez straty seta i umacniając się na pozycji lidera tabeli.</p>
+    </div>
+            </div>
+
+            
+            <div class="card">
+                <img src="https://siatka.org/wp-content/uploads/2017/12/35-PlusLiga.jpg" alt="Siatkarze na boisku">
+                <div class="card-content">
+        <h3><a href="artykul-plusliga.html">Niesamowite emocje w finale PlusLigi</a></h3>
+        <p>Zacięty tie-break wyłonił nowego mistrza kraju. Kibice zgromadzeni w hali obejrzeli pokaz siatkówki na najwyższym światowym poziomie.</p>
+    	</div>	
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-box">
+            <h3>KATEGORIE</h3>
+            <p><a href="pilka-nozna.html">Piłka nożna</a></p>
+            <p><a href="koszykowka.html">Koszykówka</a></p>
+            <p><a href="tenis.html">Tenis</a></p>
+            <p><a href="formula1.html">Formuła 1</a></p>
+            <p><a href="siatkowka.html">Siatkówka</a></p>
+        </div>
+
+        <div class="footer-box">
+            <h3>NA SKRÓTY</h3>
+            <p><a href="index.html">Strona główna</a></p>
+            <p><a href="index.html">Aktualności</a></p>
+            <p>Sport</p>
+            <p>Kontakt</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const dataDiv = document.getElementById("data");
+        const dzis = new Date();
+        const dni = ["Niedziela","Poniedziałek","Wtorek","Środa","Czwartek","Piątek","Sobota"];
+        const miesiace = ["stycznia","lutego","marca","kwietnia","maja","czerwca","lipca","sierpnia","września","października","listopada","grudnia"];
+        const tekstDaty = dni[dzis.getDay()] + ", " + dzis.getDate() + " " + miesiace[dzis.getMonth()] + " " + dzis.getFullYear();
+        dataDiv.textContent = tekstDaty;
+    });
+    </script>
+</body>
+</html>
